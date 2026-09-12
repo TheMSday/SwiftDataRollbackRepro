@@ -1,0 +1,14 @@
+◇ Test run started.
+◇ Suite SwiftDataRollbackReproducerTests started.
+◇ Test "Plain rollback restores retained schedule and variant relationships" started.
+◇ Test case passing 1 argument loadOwnerBeforeRollback → false to "Plain rollback restores retained schedule and variant relationships" started.
+Restarting after unexpected exit, crash, or test timeout; summary will include totals from previous launches.
+◇ Test run started.
+◇ Suite SwiftDataRollbackReproducerTests started.
+◇ Test "A retained run accepts a new event after plain rollback" started.
+SWIFTDATA-REPRO attaching event to retained run
+SWIFTDATA-REPRO attached event to retained run
+✔ Test "A retained run accepts a new event after plain rollback" passed after 0.016 seconds.
+✔ Suite SwiftDataRollbackReproducerTests passed after 0.017 seconds.
+✔ Test run with 1 test in 1 suite passed after 0.017 seconds.
+** TEST EXECUTE FAILED **

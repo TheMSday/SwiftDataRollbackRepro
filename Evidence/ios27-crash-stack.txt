@@ -1,0 +1,35 @@
+Relevant crash excerpt; identifiers, paths and unrelated threads omitted.
+Exception: {"codes": "0x0000000000000000, 0x0000000000000000", "rawCodes": [0, 0], "type": "EXC_CRASH", "signal": "SIGABRT"}
+Termination: Abort trap: 6
+
+Triggered thread:
+0: libsystem_kernel.dylib — __pthread_kill + 8 (image offset 45564)
+1: libsystem_pthread.dylib — pthread_kill + 268 (image offset 29788)
+2: libsystem_c.dylib — abort + 148 (image offset 497988)
+3: libswiftCore.dylib — swift::fatalErrorv(unsigned int, char const*, char*) + 68 (image offset 1676344)
+4: libswiftCore.dylib — swift::fatalError(unsigned int, char const*, ...) + 32 (image offset 1676452)
+5: libswiftCore.dylib — swift::swift_dynamicCastFailure(void const*, char const*, void const*, char const*, char const*) + 80 (image offset 1811904)
+6: libswiftCore.dylib — swift::swift_dynamicCastFailure(swift::TargetMetadata<swift::InProcess> const*, swift::TargetMetadata<swift::InProcess> const*, char const*) + 164 (image offset 1686976)
+7: libswiftCore.dylib — swift_dynamicCast.cold.1 + 28 (image offset 4863380)
+8: libswiftCore.dylib — swift_dynamicCast + 288 (image offset 50548)
+9: SwiftData — unsymbolicated + 0 (image offset 333772)
+10: SwiftData — unsymbolicated + 0 (image offset 485120)
+11: SwiftData — unsymbolicated + 0 (image offset 474032)
+12: SwiftData — unsymbolicated + 0 (image offset 517708)
+13: SwiftData — unsymbolicated + 0 (image offset 516312)
+14: SwiftData — unsymbolicated + 0 (image offset 509500)
+15: SwiftData — unsymbolicated + 0 (image offset 519532)
+16: SwiftData — unsymbolicated + 0 (image offset 515640)
+17: SwiftData — unsymbolicated + 0 (image offset 514172)
+18: SwiftData — unsymbolicated + 0 (image offset 449004)
+19: SwiftDataRollbackReproTests — closure #1 in RollbackProbeEvent.run.setter + 100 (image offset 99060) [@__swiftmacro_27SwiftDataRollbackReproTests0C10ProbeEventC3run18_PersistedPropertyfMa_.swift:13]
+20: SwiftDataRollbackReproTests — partial apply for closure #1 in RollbackProbeEvent.run.setter + 28 (image offset 99592) [/<compiler-generated>:?]
+21: libswiftObservation.dylib — ObservationRegistrar.withMutation<A, B, C>(of:keyPath:_:) + 112 (image offset 16248)
+22: SwiftDataRollbackReproTests — RollbackProbeEvent.run.setter + 184 (image offset 61004) [@__swiftmacro_27SwiftDataRollbackReproTests0C10ProbeEventC3run18_PersistedPropertyfMa_.swift:12]
+23: SwiftDataRollbackReproTests — SwiftDataRollbackReproducerTests.attachEventAfterRollback() + 4108 (image offset 51716) [SwiftDataRollbackReproducerTests.swift:109]
+24: SwiftDataRollbackReproTests — $s27SwiftDataRollbackReproTests0abc10ReproducerE0V016attachEventAfterC04TestfMp_7__localfMu0_ #1 @Sendable (_:) in static SwiftDataRollbackReproducerTests.$s27SwiftDataRollbackReproTests0abc10ReproducerE0V016attachEventAfterC04TestfMp_16eec05acedd8c0646fMu_@Sendable () + 56 (image offset 47044) [@__swiftmacro_27SwiftDataRollbackReproTests0abc10ReproducerE0V016attachEventAfterC04TestfMp_.swift:5]
+25: SwiftDataRollbackReproTests — static SwiftDataRollbackReproducerTests.$s27SwiftDataRollbackReproTests0abc10ReproducerE0V016attachEventAfterC04TestfMp_16eec05acedd8c0646fMu_@Sendable () + 1 (image offset 45881) [@__swiftmacro_27SwiftDataRollbackReproTests0abc10ReproducerE0V016attachEventAfterC04TestfMp_.swift:7]
+26: SwiftDataRollbackReproTests — implicit closure #1 in static SwiftDataRollbackReproducerTests.$s27SwiftDataRollbackReproTests0abc10ReproducerE0V016attachEventAfterC04TestfMp_25generatoreec05acedd8c0646fMu_@Sendable () + 1 (image offset 57137) [@__swiftmacro_27SwiftDataRollbackReproTests0abc10ReproducerE0V016attachEventAfterC04TestfMp_.swift:?]
+27: SwiftDataRollbackReproTests — <deduplicated_symbol> + 1 (image offset 60205)
+28: Testing — specialized static Runner._applyScopingTraits(for:testCase:_:) + 1 (image offset 991669)
+29: Testing — specialized closure #1 in closure #1 in closure #1 in static Runner._runSingleTestCaseIteration(_:within:) + 1 (image offset 1000097)

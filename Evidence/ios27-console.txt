@@ -1,0 +1,28 @@
+        ➜ Explicit dependency on target 'SwiftDataRollbackRepro' in project 'SwiftDataRollbackRepro'
+◇ Test run started.
+◇ Suite SwiftDataRollbackReproducerTests started.
+◇ Test "Plain rollback restores retained schedule and variant relationships" started.
+◇ Test case passing 1 argument loadOwnerBeforeRollback → false to "Plain rollback restores retained schedule and variant relationships" started.
+SWIFTDATA-REPRO retained owner=true variant=true stepOwner=true clean=true
+SWIFTDATA-REPRO ownerScheduleID=nil expected=E07DA560-40EB-42FD-A122-EC75E1962711
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → false at SwiftDataRollbackReproducerTests.swift:68:5: Expectation failed: retainedOwnerSchedule?.id == schedule.id
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → false at SwiftDataRollbackReproducerTests.swift:69:5: Expectation failed: retainedOwnerSchedule === schedule
+​◇ Test case passing 1 argument loadOwnerBeforeRollback → true to "Plain rollback restores retained schedule and variant relationships" started.
+SWIFTDATA-REPRO retained owner=true variant=true stepOwner=true clean=true
+SWIFTDATA-REPRO ownerScheduleID=Optional(72995D78-BA60-4E02-8586-1D6C938206C0) expected=72995D78-BA60-4E02-8586-1D6C938206C0
+​✘ Test "Plain rollback restores retained schedule and variant relationships" with 2 test cases failed after 0.019 seconds with 2 issues.
+◇ Test "A retained run accepts a new event after plain rollback" started.
+SWIFTDATA-REPRO attaching event to retained run
+Could not cast value of type 'SwiftData.DefaultStore.DefaultStoreSnapshotValueFuture' (0x1f247b738) to 'Swift.Array<SwiftDataRollbackReproTests.RollbackProbeEvent>' (0x1354109e8).
+Restarting after unexpected exit, crash, or test timeout; summary will include totals from previous launches.
+◇ Test run started.
+◇ Suite SwiftDataRollbackReproducerTests started.
+◇ Test "A retained run accepts a new event after plain rollback" started.
+SWIFTDATA-REPRO attaching event to retained run
+Could not cast value of type 'SwiftData.DefaultStore.DefaultStoreSnapshotValueFuture' (0x1f247b738) to 'Swift.Array<SwiftDataRollbackReproTests.RollbackProbeEvent>' (0x109b11bc0).
+Restarting after unexpected exit, crash, or test timeout; summary will include totals from previous launches.
+◇ Test run started.
+◇ Suite SwiftDataRollbackReproducerTests started.
+✔ Suite SwiftDataRollbackReproducerTests passed after 0.001 seconds.
+✔ Test run with 0 tests in 1 suite passed after 0.001 seconds.
+** TEST FAILED **

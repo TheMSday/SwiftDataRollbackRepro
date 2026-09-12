@@ -1,0 +1,26 @@
+◇ Test run started.
+◇ Suite SwiftDataRollbackReproducerTests started.
+◇ Test "Plain rollback restores retained schedule and variant relationships" started.
+◇ Test case passing 1 argument loadOwnerBeforeRollback → false to "Plain rollback restores retained schedule and variant relationships" started.
+SWIFTDATA-REPRO retained owner=true variant=false stepOwner=false clean=true
+SWIFTDATA-REPRO ownerScheduleID=Optional(50EF461F-4A12-4FFF-B497-C0C631E034BA) expected=50EF461F-4A12-4FFF-B497-C0C631E034BA
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → false at SwiftDataRollbackReproducerTests.swift:71:5: Expectation failed: step.schedule === schedule
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → false at SwiftDataRollbackReproducerTests.swift:72:5: Expectation failed: step.variant === variant
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → false at SwiftDataRollbackReproducerTests.swift:74:5: Expectation failed: schedule.steps?.first === step
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → false at SwiftDataRollbackReproducerTests.swift:75:5: Expectation failed: !variant.retired
+​◇ Test case passing 1 argument loadOwnerBeforeRollback → true to "Plain rollback restores retained schedule and variant relationships" started.
+SWIFTDATA-REPRO retained owner=true variant=false stepOwner=false clean=true
+SWIFTDATA-REPRO ownerScheduleID=Optional(627C44CA-E731-44DF-BF6F-DCC9C35DD424) expected=627C44CA-E731-44DF-BF6F-DCC9C35DD424
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → true at SwiftDataRollbackReproducerTests.swift:71:5: Expectation failed: step.schedule === schedule
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → true at SwiftDataRollbackReproducerTests.swift:72:5: Expectation failed: step.variant === variant
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → true at SwiftDataRollbackReproducerTests.swift:74:5: Expectation failed: schedule.steps?.first === step
+✘ Test "Plain rollback restores retained schedule and variant relationships" recorded an issue with 1 argument loadOwnerBeforeRollback → true at SwiftDataRollbackReproducerTests.swift:75:5: Expectation failed: !variant.retired
+​✘ Test "Plain rollback restores retained schedule and variant relationships" with 2 test cases failed after 0.313 seconds with 8 issues.
+◇ Test "A retained run accepts a new event after plain rollback" started.
+SWIFTDATA-REPRO attaching event to retained run
+SWIFTDATA-REPRO attached event to retained run
+✘ Test "A retained run accepts a new event after plain rollback" recorded an issue at SwiftDataRollbackReproducerTests.swift:117:5: Expectation failed: try finalReader.fetchCount(FetchDescriptor<RollbackProbeAction>()) == 0
+✘ Test "A retained run accepts a new event after plain rollback" failed after 0.013 seconds with 1 issue.
+✘ Suite SwiftDataRollbackReproducerTests failed after 0.327 seconds with 9 issues.
+✘ Test run with 2 tests in 1 suite failed after 0.327 seconds with 9 issues.
+** TEST EXECUTE FAILED **

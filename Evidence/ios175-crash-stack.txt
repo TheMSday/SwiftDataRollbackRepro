@@ -1,0 +1,42 @@
+Relevant crash excerpt; identifiers, paths and unrelated threads omitted.
+Exception: {"codes": "0x0000000000000002, 0x000000016b36ff60", "message": "Could not determine thread index for stack guard region", "rawCodes": [2, 6093733728], "type": "EXC_BAD_ACCESS", "signal": "SIGSEGV", "subtype": "KERN_PROTECTION_FAILURE at 0x000000016b36ff60"}
+Termination: Segmentation fault: 11
+
+Triggered thread:
+0: libswiftCore.dylib — getCache(swift::TargetTypeContextDescriptor<swift::InProcess> const&) + 4 (image offset 3008900)
+1: libswiftCore.dylib — _swift_getGenericMetadata(swift::MetadataRequest, void const* const*, swift::TargetTypeContextDescriptor<swift::InProcess> const*) + 52 (image offset 3011608)
+2: libswiftCore.dylib — __swift_instantiateGenericMetadata + 32 (image offset 2865460)
+3: libswiftCore.dylib — static Dictionary._bridgeFromObjectiveCAdoptingNativeStorageOf(_:) + 44 (image offset 641692)
+4: Foundation — static Dictionary._unconditionallyBridgeFromObjectiveC(_:) + 108 (image offset 3359704)
+5: SwiftData — unsymbolicated + 0 (image offset 591776)
+6: SwiftData — unsymbolicated + 0 (image offset 595044)
+7: SwiftData — unsymbolicated + 0 (image offset 595004)
+8: CoreData — thunk for @callee_guaranteed () -> (@out A, @error @owned Error) + 20 (image offset 11052)
+9: CoreData — partial apply for thunk for @callee_guaranteed () -> (@out A, @error @owned Error) + 20 (image offset 19968)
+10: CoreData — closure #1 in closure #1 in NSManagedObjectContext._rethrowsHelper_performAndWait<A>(fn:execute:rescue:) + 108 (image offset 18676)
+11: CoreData — thunk for @callee_guaranteed () -> () + 20 (image offset 12556)
+12: CoreData — thunk for @escaping @callee_guaranteed () -> () + 20 (image offset 12636)
+13: CoreData — developerSubmittedBlockToNSManagedObjectContextPerform + 156 (image offset 755412)
+14: CoreData — -[NSManagedObjectContext performBlockAndWait:] + 212 (image offset 755120)
+15: CoreData — NSManagedObjectContext.performAndWait<A>(_:) + 352 (image offset 19620)
+16: SwiftData — unsymbolicated + 0 (image offset 587600)
+17: SwiftData — unsymbolicated + 0 (image offset 589204)
+18: SwiftData — unsymbolicated + 0 (image offset 588984)
+19: SwiftData — unsymbolicated + 0 (image offset 594928)
+20: SwiftData — unsymbolicated + 0 (image offset 193436)
+21: SwiftData — unsymbolicated + 0 (image offset 193468)
+22: CoreData — developerSubmittedBlockToNSManagedObjectContextPerform + 156 (image offset 755412)
+23: CoreData — -[NSManagedObjectContext performBlockAndWait:] + 212 (image offset 755120)
+24: SwiftData — unsymbolicated + 0 (image offset 588456)
+25: SwiftData — unsymbolicated + 0 (image offset 593548)
+26: SwiftData — unsymbolicated + 0 (image offset 592764)
+27: SwiftData — unsymbolicated + 0 (image offset 591924)
+28: SwiftData — unsymbolicated + 0 (image offset 595044)
+29: SwiftData — unsymbolicated + 0 (image offset 595004)
+75: SwiftDataRollbackReproTests — SwiftDataRollbackReproducerTests.retainedRelationshipsAfterRollback(loadOwnerBeforeRollback:) + 4644 (image offset 11972) [SwiftDataRollbackReproducerTests.swift:51]
+76: SwiftDataRollbackReproTests — $s27SwiftDataRollbackReproTests0abc10ReproducerE0V026retainedRelationshipsAfterC04TestfMp_7__localfMu0_ #1 @Sendable (loadOwnerBeforeRollback:_:) in static SwiftDataRollbackReproducerTests.$s27SwiftDataRollbackReproTests0abc10ReproducerE0V026retainedRelationshipsAfterC04TestfMp_15e83cb933338fd8efMu_@Sendable (loadOwnerBeforeRollback:) + 76 (image offset 6736) [@__swiftmacro_27SwiftDataRollbackReproTests0abc10ReproducerE0V026retainedRelationshipsAfterC04TestfMp_.swift:5]
+77: SwiftDataRollbackReproTests — static SwiftDataRollbackReproducerTests.$s27SwiftDataRollbackReproTests0abc10ReproducerE0V026retainedRelationshipsAfterC04TestfMp_15e83cb933338fd8efMu_@Sendable (loadOwnerBeforeRollback:) + 1 (image offset 5453) [@__swiftmacro_27SwiftDataRollbackReproTests0abc10ReproducerE0V026retainedRelationshipsAfterC04TestfMp_.swift:7]
+78: SwiftDataRollbackReproTests — implicit closure #1 in static SwiftDataRollbackReproducerTests.$s27SwiftDataRollbackReproTests0abc10ReproducerE0V026retainedRelationshipsAfterC04TestfMp_24generatore83cb933338fd8efMu_@Sendable () + 1 (image offset 25797) [@__swiftmacro_27SwiftDataRollbackReproTests0abc10ReproducerE0V026retainedRelationshipsAfterC04TestfMp_.swift:?]
+79: SwiftDataRollbackReproTests — unsymbolicated + 0 (image offset 47169)
+80: SwiftDataRollbackReproTests — thunk for @escaping @callee_guaranteed @Sendable @async (@unowned Bool) -> (@error @owned Error) + 1 (image offset 26325) [/<compiler-generated>:?]
+81: SwiftDataRollbackReproTests — unsymbolicated + 0 (image offset 47169)
